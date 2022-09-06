@@ -1,56 +1,71 @@
 import { useState } from 'react';
-import { View, Text } from '@tarojs/components';
-import { AtSearchBar, AtTabBar } from 'taro-ui';
-import Taro from '@tarojs/taro';
+import { View, Image, Swiper, SwiperItem } from '@tarojs/components';
+import { AtSearchBar, AtGrid } from 'taro-ui';
+import DeskBooking from 'Images/desk-booking.png';
+import RoomBooking from 'Images/room-booking.png';
+import CarSpaceBooking from 'Images/car-space-booking.png';
+import SpaceUtilization from 'Images/space-utilization.png';
+import Desktop from 'Images/desktop.png';
+import Meeting from 'Images/meeting.png';
+import Parking from 'Images/parking.png';
+import Waiting from 'Images/waiting.png';
+
 import './index.scss';
 
 definePageConfig({
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: 'Home'
 });
 
-const tabList = [
-    { title: 'Home', iconType: 'home' },
-    { title: 'Utilization', iconType: 'analytics' },
+const imgList = [DeskBooking, RoomBooking, CarSpaceBooking, SpaceUtilization];
+const gridList = [
     {
-        title: 'History',
-        iconType: 'list',
-        text: '100',
-        max: 99
+        image: Desktop,
+        value: 'Desk'
     },
     {
-        title: 'User',
-        iconType: 'user'
+        image: Meeting,
+        value: 'Room'
+    },
+    {
+        image: Parking,
+        value: 'Car Space'
+    },
+    {
+        image: Waiting,
+        value: 'Coming Soon'
     }
 ];
 
 const Home = () => {
     const [searchValue, setSearchValue] = useState('');
-    const [currentTab, setCrrentTab] = useState<number>(0);
+    const [swiperHeight, setSwiperHeight] = useState('');
 
-    const handleSearch = (value: string) =>{
-        setSearchValue(value)
-    }
+    const handleSearch = (value: string) => {
+        setSearchValue(value);
+    };
 
-    const handleTabClick = (tab: number) => {
-        Taro.navigateTo({
-            url: `/pages/${tabList[tab].title.toLowerCase()}`
-        });
-        setCrrentTab(tab);
+    const imgLoadDetail = (e: any) => {
+        setSwiperHeight(e?.detail?.height);
     };
 
     return (
         <View className="index">
-            <AtSearchBar
-                value={searchValue}
-                onChange={handleSearch}
-            />
-            <Text>Home</Text>
-            <AtTabBar
-                fixed
-                tabList={tabList}
-                onClick={handleTabClick}
-                current={currentTab}
-            />
+            <AtSearchBar value={searchValue} onChange={handleSearch} />
+            <Swiper
+                style={{ height: swiperHeight + 'px' }}
+                indicatorColor="#999"
+                indicatorActiveColor="#fff"
+                circular
+                indicatorDots
+                autoplay
+            >
+                {imgList.map((item: any, index: any) => (
+                    <SwiperItem key={index}>
+                        <Image src={item} onLoad={imgLoadDetail} />
+                    </SwiperItem>
+                ))}
+            </Swiper>
+            <AtGrid columnNum={2} data={gridList} />
         </View>
     );
 };

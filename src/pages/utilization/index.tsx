@@ -4,7 +4,7 @@ import { AtTabBar } from 'taro-ui';
 import './index.scss';
 
 definePageConfig({
-    navigationBarTitleText: '利用率'
+    navigationBarTitleText: '使用率'
 });
 
 const Utilization = () => {
