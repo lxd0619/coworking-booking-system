@@ -1,5 +1,11 @@
 export default defineAppConfig({
-    pages: ['pages/Welcome/index.tsx', 'pages/Home/index.tsx'],
+    pages: [
+        'pages/welcome',
+        'pages/home',
+        'pages/utilization',
+        'pages/history',
+        'pages/user'
+    ],
     window: {
         backgroundTextStyle: 'light',
         navigationBarBackgroundColor: '#fff',
