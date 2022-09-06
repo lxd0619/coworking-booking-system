@@ -2,10 +2,14 @@ import { View, Text } from '@tarojs/components';
 import './index.scss';
 import Taro from '@tarojs/taro';
 
+definePageConfig({
+    navigationBarTitleText: '欢迎页'
+});
+
 const Welcome = () => {
     const goToHome = () => {
         Taro.navigateTo({
-            url: '/pages/Home/index.tsx'
+            url: '/pages/home'
         });
     };
 
