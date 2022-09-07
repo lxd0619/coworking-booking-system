@@ -1,27 +1,33 @@
 {
-  "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true,
-    "outDir": "lib",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictNullChecks": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "rootDir": ".",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ]
-  },
-  "include": ["./src", "global.d.ts"],
-  "compileOnSave": false
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "commonjs",
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "outDir": "lib",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "rootDir": ".",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "typeRoots": ["node_modules/@types"],
+        "paths": {
+            "Components": ["./src/components"],
+            "Utils": ["./src/utils"],
+            "Styles": ["./src/styles"],
+            "Apis": ["./src/apis"],
+            "Images": ["./src/assets/images"],
+            "Icons": ["./src/assets/icons"]
+        }
+    },
+    "include": ["./src", "global.d.ts"],
+    "compileOnSave": false
 }

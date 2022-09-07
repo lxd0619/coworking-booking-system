@@ -1,3 +1,4 @@
+const path = require('path')
 const config = {
     projectName: 'coworking-booking-system',
     date: '2022-5-18',
@@ -54,6 +55,14 @@ const config = {
             }
         },
         esnextModules: ['taro-ui']
+    },
+    alias: {
+        'Components': path.resolve(__dirname, '..', 'src/components'),
+        'Utils': path.resolve(__dirname, '..', 'src/utils'),
+        'Styles': path.resolve(__dirname, '..', 'src/styles'),
+        'Apis': path.resolve(__dirname, '..', 'src/apis'),
+        'Images': path.resolve(__dirname, '..', 'src/assets/images'),
+        'Icons': path.resolve(__dirname, '..', 'src/assets/icons')
     }
 };
 
