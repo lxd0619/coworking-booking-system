@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { View, Text } from '@tarojs/components';
-import { AtTabBar } from 'taro-ui';
+import {  } from 'taro-ui';
 import './index.scss';
 
 definePageConfig({
-    navigationBarTitleText: '用户中心'
+    navigationBarTitleText: 'User'
 });
 
 const User = () => {
-    const [currentTab, setCrrentTab] = useState(0);
+    const [] = useState();
 
     return (
         <View className="index">

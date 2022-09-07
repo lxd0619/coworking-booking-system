@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { View, Text } from '@tarojs/components';
-import { AtTabBar } from 'taro-ui';
+import {  } from 'taro-ui';
 import './index.scss';
 
 definePageConfig({
-    navigationBarTitleText: '使用率'
+    navigationBarTitleText: 'Utilization'
 });
 
 const Utilization = () => {
-    const [currentTab, setCrrentTab] = useState(0);
+    const [] = useState();
 
     return (
         <View className="index">

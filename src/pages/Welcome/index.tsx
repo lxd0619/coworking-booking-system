@@ -3,7 +3,7 @@ import './index.scss';
 import Taro from '@tarojs/taro';
 
 definePageConfig({
-    navigationBarTitleText: '欢迎页'
+    navigationBarTitleText: 'Welcome'
 });
 
 const Welcome = () => {
@@ -14,9 +14,13 @@ const Welcome = () => {
     };
 
     return (
-        <View className="index" onClick={goToHome}>
-            <Text>Welcome to</Text>
-            <Text>Coworking Booking System</Text>
+        <View className="welcome-container" onClick={goToHome}>
+            <View className="welcome-title-box">
+                <Text className="welcome-title">Welcome to</Text>
+                <Text className="welcome-subtitle">
+                    Coworking Booking System
+                </Text>
+            </View>
         </View>
     );
 };
