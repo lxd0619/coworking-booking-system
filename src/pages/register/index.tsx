@@ -24,7 +24,7 @@ const Register = () => {
                     className="register-input"
                     name="value"
                     type="text"
-                    placeholder="UserName"
+                    placeholder="USERNAME"
                     value={inputValue}
                     onChange={(e: any) => setInputValue(e)}
                 />
@@ -33,7 +33,7 @@ const Register = () => {
                     name="value6"
                     border={false}
                     type="phone"
-                    placeholder="Mobile"
+                    placeholder="MOBILE"
                     value={inputValue}
                     onChange={(e: any) => setInputValue(e)}
                 />
@@ -49,7 +49,7 @@ const Register = () => {
                     className="register-input"
                     name="value3"
                     type="password"
-                    placeholder="Password"
+                    placeholder="PASSWORD"
                     value={inputValue}
                     onChange={(e: any) => setInputValue(e)}
                 />
@@ -57,7 +57,7 @@ const Register = () => {
                     className="register-input"
                     name="value3"
                     type="password"
-                    placeholder="Confirm Password"
+                    placeholder="CONFIRM PASSWORD"
                     value={inputValue}
                     onChange={(e: any) => setInputValue(e)}
                 />

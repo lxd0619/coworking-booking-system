@@ -1,0 +1,81 @@
+.login-container {
+    height: 100%;
+    width: 100%;
+    background-color: #f8a384;
+    background-image: linear-gradient(132deg, #f8a384 0%, #eb5675 100%);
+    padding: 0 10%;
+    .login-form {
+        width: 80%;
+        background-color: transparent;
+        .login-avatar {
+            display: block;
+            width: 120PX;
+            height: 120PX;
+            margin: 0 auto;
+            padding: 50PX 0 30PX 0;
+        }
+        .login-input {
+            background-color: transparent;
+            border: 1px solid #ccc;
+            margin-bottom: 26PX;
+            margin-left: 0;
+            width: 100%;
+            height: 40PX;
+            line-height: 40PX;
+            border-radius: 29.5PX;
+            display: flex;
+            align-items: center;
+            .at-input__input {
+                padding-left: 10PX;
+                .weui-input {
+                    font-size: 24PX;
+                    color: #fff;
+                    &::-webkit-input-placeholder {
+                        color: #fff;
+                        font-family: Arial;
+                    }
+                }
+            }
+            &::after{
+                border: 0;
+            }
+            &:nth-child(3) {
+                margin-bottom: 0;
+            }
+        }
+        .login-forgot-password,.login-have-no-account,.login-register-here {
+            font-size: 14PX;
+            font-family: Arial;
+            color: #fff;
+        }
+        .login-have-no-account {
+            color: #666;
+            margin-right: 10PX;
+        }
+        .login-singup,
+        .login-loginWithEmailOrSignup {
+            height: 61PX;
+            line-height: 61PX;
+            font-size: 14PX;
+        }
+        .login-singup {
+            background-color: #C6CCCD;
+            margin-top: 10PX;
+        }
+        .login-loginWithEmailOrSignup {
+            background-color: #39579A;
+            color: #fff;
+        }
+        .login-divider {
+            .at-divider__content{
+                background-color: transparent;
+            }
+        }
+    }
+    .login-tips {
+        width: 80%;
+        color: #333;
+        font-size: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
